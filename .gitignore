@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+.env*.local
+.DS_Store
+*.log
+tsconfig.tsbuildinfo
+
+# original drop of the logo with the messy filename — superseded by /public/logo.webp
+public/logo (*).webp

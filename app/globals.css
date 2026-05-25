@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background:
+      radial-gradient(1200px 600px at 50% -10%, rgba(16, 185, 129, 0.08), transparent 60%),
+      radial-gradient(800px 400px at 90% 30%, rgba(34, 211, 238, 0.05), transparent 60%),
+      #08080a;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08080a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262a33;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3f4b;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] tracking-[0.22em] uppercase text-ink-300;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-ink-700/80 bg-ink-900/60 px-3 py-1 font-mono text-[11px] tracking-wider text-ink-200 backdrop-blur;
+  }
+
+  .pill-dot {
+    @apply inline-block size-1.5 rounded-full bg-heal-400 shadow-[0_0_10px_2px_rgba(52,211,153,0.6)];
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-ink-700/70 bg-ink-900/40 backdrop-blur;
+    background-image:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0) 50%);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(52, 211, 153, 0.25);
+    box-shadow: 0 30px 80px -40px rgba(16, 185, 129, 0.25);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .grid-bg-fade {
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 30%, #000 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 30%, #000 30%, transparent 80%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-heal-400 px-5 py-2.5 font-medium text-ink-950 shadow-[0_10px_30px_-12px_rgba(52,211,153,0.6)] transition hover:bg-heal-300 hover:shadow-[0_18px_40px_-12px_rgba(52,211,153,0.7)];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-ink-700/70 bg-ink-900/40 px-5 py-2.5 font-medium text-ink-100 backdrop-blur transition hover:border-heal-400/40 hover:bg-ink-800/50;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-md border border-ink-700 bg-ink-900/70 px-2 py-0.5 font-mono text-[10.5px] tracking-wider;
+  }
+
+  .chip-heal {
+    @apply chip text-heal-300 border-heal-400/30 bg-heal-400/5;
+  }
+
+  .chip-signal {
+    @apply chip text-signal-400 border-signal-400/30 bg-signal-400/5;
+  }
+
+  .chip-warn {
+    @apply chip text-warn-400 border-warn-400/30 bg-warn-400/5;
+  }
+
+  .chip-danger {
+    @apply chip text-danger-400 border-danger-400/30 bg-danger-400/5;
+  }
+
+  .divider-glow {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(52, 211, 153, 0.45),
+      transparent
+    );
+  }
+
+  .section {
+    @apply relative py-24 sm:py-32;
+  }
+
+  .heading-xl {
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-[-0.02em] leading-[1.05] text-balance;
+  }
+
+  .heading-lg {
+    @apply font-display text-3xl sm:text-4xl font-medium tracking-[-0.02em] leading-[1.1] text-balance;
+  }
+
+  .heading-md {
+    @apply font-display text-2xl font-medium tracking-[-0.01em] text-balance;
+  }
+
+  .lead {
+    @apply text-ink-200 text-lg leading-relaxed max-w-2xl text-balance;
+  }
+}
+
+@layer utilities {
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      #e6e7eb 0%,
+      #6ee7b7 50%,
+      #e6e7eb 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  }
+}
