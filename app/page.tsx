@@ -1,3 +1,5 @@
+// INTENTIONAL BUILD BREAK — remove this line to fix
+const _buildBreaker: string = 42; // TS2322: Type 'number' is not assignable to type 'string'
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import IntegrationHub from "@/components/IntegrationHub";
