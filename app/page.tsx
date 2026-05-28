@@ -12,7 +12,7 @@ import Integrations from "@/components/Integrations";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
-export default function Page() {
+export default function Page(): JSX.Element {
   return (
     <main className="relative">
       <Nav />
