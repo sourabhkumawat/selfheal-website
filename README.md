@@ -1,8 +1,8 @@
-# HealOps.ai — Marketing Site
+# selfheal.ai — Marketing Site
 
 The autonomous SRE that doesn't just find the bug, it ships the fix.
 
-HealOps investigates the moment an alert fires, correlates signals across your stack, isolates the root cause and opens a reviewed pull request with a regression test attached — one agent, one continuous chain of custody from page to merge.
+selfheal investigates the moment an alert fires, correlates signals across your stack, isolates the root cause and opens a reviewed pull request with a regression test attached — one agent, one continuous chain of custody from page to merge.
 
 ## Stack
 
@@ -56,5 +56,5 @@ lib/
 The site borrows the **information density and terminal vocabulary** of
 modern infra-marketing sites (numbered framework cards, status chips, live
 event feeds, comparison tables) but keeps the palette and copy unique to
-HealOps: an **emerald-on-near-black** healing aesthetic and language built
+selfheal: an **emerald-on-near-black** healing aesthetic and language built
 around the closing of the loop — incident → investigation → **pull request**.
