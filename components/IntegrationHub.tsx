@@ -286,33 +286,6 @@ export default function IntegrationHub() {
     return (
         <section className="relative pt-4 pb-24 sm:pb-32">
             {/* Moving Logo Stripe */}
-            <div className="w-full mb-12 sm:mb-16 relative">
-                <div className="text-center font-mono text-[10px] sm:text-[11px] tracking-[0.25em] text-ink-400 uppercase mb-4">
-                    Trusted by high-performance engineering teams
-                </div>
-                <div className="mask-fade-x overflow-hidden border-y border-ink-800/40 bg-ink-950/20 py-5 relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-heal-500/5 to-transparent pointer-events-none" />
-                    <div className="flex w-max gap-12 sm:gap-20 animate-marquee py-1 hover:[animation-play-state:paused]">
-                        {MARQUEE_LOGOS.map((logo, idx) => (
-                            <a
-                                key={`${logo.name}-${idx}`}
-                                href={logo.url}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="relative h-7 w-28 sm:h-9 sm:w-36 shrink-0 flex items-center justify-center filter grayscale opacity-45 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                            >
-                                <Image
-                                    src={logo.src}
-                                    alt={`${logo.name} logo`}
-                                    fill
-                                    className="object-contain"
-                                    sizes="(max-width: 640px) 112px, 144px"
-                                />
-                            </a>
-                        ))}
-                    </div>
-                </div>
-            </div>
 
             <div className="container-x">
                 <motion.div
